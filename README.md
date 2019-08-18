@@ -1,68 +1,62 @@
-# MatJek
+# mug
 
-A responsive [Material](https://material.io/) theme based on [Materialize.css](http://materializecss.com/) for jekyll sites.
+Jekyll theme
 
-## Features
+> :warning:
+  This theme requires ruby and rubygems installed
 
-* Google Analytics
-* Disqus
-* [GitHub project page](https://shawnteoh.github.io/matjek/projects/)
-* [Tags](https://shawnteoh.github.io/matjek/tags/) and [Categories](https://shawnteoh.github.io/matjek/categories/)
-* Modular CSS and JS includes ([example](https://github.com/ShawnTeoh/matjek/blob/gh-pages/projects.md/))
-* [Fancy "About" page](https://shawnteoh.github.io/matjek/about)
+* [x] Clean layout
+* [x] Resposive layout
+* [x] Preprocessor SASS
+* [x] CSS minified
+* [x] Search posts
+* [x] Pagination
+* [x] Syntax highlight
+* [x] Author config
+* [x] Share posts
+* [x] Comments with Disqus
 
-## Installation
+---
 
-Clone or fork this repo and edit `_config.yml` as needed.
+### Start in 4 steps
 
-## Configuration
+1. Download or clone repo `git clone git@github.com:nandomoreirame/mug.git`
+2. Enter the folder: `cd mug/`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `jekyll serve`
 
-Most of the configurations can be found in `_config.yml`. The configurations listed below are specific to MatJek. If you are not using `google_tracking_id` or `disqus_shortname`, just remove them completely.
+Access, [localhost:4000/mug](http://localhost:4000/mug)
 
-```yaml
-github_profile: "github_profile_url"
-user: "your_name" # Appears at sidebar
-user_email: "your_email" # Appears at sidebar, remove whole variable if unwanted
-contact_url: "google_form_link"
-google_tracking_id: "google_analytics_ID"
-disqus_shortname: "shortname_given_by_Disqus"
-```
+### Deploy in Github pages in 2 steps
 
-Edit the images in `assets/res` to suit your liking, but try to stick to the original resolutions.
+1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
+2. Run `rake` or `rake publish` for build and publish on Github
 
-If you would like to enable comments in a post (disqus_shortname must be provided), add this line to the front matter of the post.
+---
 
-```yaml
-comments: 1
-```
+### Using Rake tasks
 
-Add tags and categories to your posts in the front matter as well. Multiple tags/categories can be assigned but need to be separated by spaces.
+* Create a new page: `rake page name="contact.md"`
+* Create a new post: `rake post title="TITLE OF THE POST"`
 
-```yaml
-categories: default default2
-tags: test test2
-```
+---
 
-## Contributing
+### Demo and Download
 
-Bug reports and pull requests are welcomed on GitHub at https://github.com/shawnteoh/matjek. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+[Demo](https://nandomoreirame.github.io/mug/)
+[Download](https://github.com/nandomoreirame/mug/archive/master.zip)
 
-## Development
+![mug - free Jekyll theme](/screenshot.png)
 
-To set up your environment to develop this theme, clone/fork the repo and run `bundle install`.
+---
 
-To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000/matjek/`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### Copyright and license
 
-## License
+It is under [the MIT license](/LICENSE).
 
-The theme is available as open source under the terms of the [GPL v3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
+> :warning:
+  Please remove metas `<meta name="robots" content="noindex">` and `<meta name="googlebot" content="noindex">` in `_layouts/default.html`
 
-## Libraries
-* [Materialize.css](http://materializecss.com/)
-* [GeoPattern](https://github.com/btmills/geopattern/)
-* [Animate.css](https://daneden.github.io/animate.css/)
-* [Morphtext](http://morphext.fyianlai.com/)
+Enjoy :yum:
 
-## References
-* https://github.com/DONGChuan/Yummy-Jekyll/
-* https://github.com/codinfox/codinfox-lanyon/
+
