@@ -1,63 +1,44 @@
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-
-title: Console
-email: jaeheelee0113@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Console theme simplifying Jekyll blog implementation process. Concise and fast theme.
-baseurl: "" # the subpath of your site, e.g. /blog
-production_url: "http://localhost:3000"
-url: http://localhost:3000 # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /posts/:categories/:title
-
-# Footer social links if not provided then the icon would not be visible
-twitter_username: jaehee0113
-github_username:  jaehee0113
-youtube_username: jaehee0113
-linkedin_username: jaehee0113
-
-# Disqus settings (shortname is sufficient)
-disqus_shortname: Philsensus
-
-# txtpen settings (shortname is sufficient)
-txtpen_sitename: 
+# Basic settings
+description:  This is personal blog.
+baseurl: "/"
+url: "https://lavkumarv.github.io" 
+twitter_username: LAV_K_V
+github_username:  lavkumarv
+include: ['_pages']
 
 # Build settings
-markdown: kramdown
+markdown:    kramdown
+highlighter: pygments
+lsi:         false
+excerpt_separator: "\n\n"
 gems:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-polyglot
-  - jekyll-seo-tag
 exclude:
-  - package.json
-  - Rakefile
-  - node_modules
   - Gemfile
-  - console-theme.gemspec
-  - gulpfile.js
-  - assets/js
-  - assets/css
-  - screenshot.png
-  - LICENSE.txt
-  - README.md
+  - Gemfile.lock
 
-# Jekyll paginate settings
+# pagination
+gems: [jekyll-paginate]
 paginate: 5
-paginate_path: "/archive/page:num/"
+paginate_path: "/page:num/"
 
-# Related posts settings
-max_related_posts_num: 4
+# Enable comments
+comments: true
 
-# sass settings (you can turn this on but please run gulp)
-#sass:
-#  sass_dir: _sass
-#  style: compressed
+# Markdown settings
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# Jekyll polyglot settings
-languages: ["en"]
-default_lang: "en"
-exclude_from_localization: ["javascript", "images", "css"]
-parallel_localization: false
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
