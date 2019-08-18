@@ -1,42 +1,26 @@
-permalink   : /:categories/:year/:title/
-markdown    : kramdown
-highlighter : pygments
+# Site settings
+name: Less Or More
+email: luoyan35714@126.com
+author: Freud Kang
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: "/LessOrMore"
+description: Actually, less is more!
+meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-paginate: 2 #6
-comments: true
-paginate_path: "/page/:num"
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
 
-source: source
-destination: _site
-sass:
-  sass_dir: _scss
-  style: compressed
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-cover: /assets/images/default-cover.png
+github_username: luoyan35714
 
-# site title, description, meta_description, meta_keywords
-# Details for the RSS feed generator
-name: Mug Jekyll theme
-title: Mug
-description: "A free Jekyll theme for download"
-keywords: "Jekyll, theme, mug, free, download, SEO, blog, web"
-url: http://nandomoreira.me
-baseurl: "/mug"
-domain_name: nandomoreira.me
-# google_analytics: UA-52446115-1
-repo: http://github.com/nandomoreirame/mug
-disqus_shortname: "nandothemes"
+# Build settings
+markdown: kramdown
 
-author:
-  name      : Fernando Moreira
-  image     : /assets/images/author.jpg
-  email     : nandomoreira.me@gmail.com
-  url       : http://nandomoreira.me
-  facebook  : http://facebook.com/fernando.dev
-  twitter   : http://twitter.com/nandomoreirame
-  instagram : http://instagram.com/nandomoreira.me
-  github    : http://github.com/nandomoreirame
-  linkedin  : http://linkedin.com/in/nandomoreirame
-  bio       : "Desenvolvedor Front-end/Wordpress entusiasta de performance, design responsivo e usabilidade, sempre em busca do melhor projeto e de um bom café."
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
