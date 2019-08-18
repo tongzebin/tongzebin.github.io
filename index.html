@@ -1,16 +1,8 @@
 ---
-layout: default
+layout: home
 title: Home
-bodyclass: home
+permalink: /
+navigation_weight: 1
 ---
 
-<section class="posts txt-center container">
-
-  {% for post in paginator.posts %}
-    {% include article.html %}
-  {% endfor %}
-
-  {% include pagination.html %}
-
-</section>
-
+{% include home.html %}
