@@ -1,37 +1,17 @@
 ---
-layout: post
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    {% include navigation.html %}
-    <div class="application">
-      {% include global.html %}
-      {% include search.html %}
-      {% include header.html %}
-      <section class="wrapper post">
-        {{content}}
 
-        {% if page.highlights != false %}
-          {% include highlight.html %}
-        {% endif %}
+<div class="box">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <span class="post-meta">{{ page.date | date: "%-d %B, %Y. It was a %A." }} <a style="color:grey" href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"></a></span><hr/>
 
-        {% if page.comments %}
-          {% include comment.html %}
-        {% endif %}
+    <span class="post-text">{{ content }}</span>
+    {% include post-pagination.html %}
+</div>
 
-        {% if page.related %}
-          {% include related.html %}
-        {% endif %}
+<!--<div class="box">-->
+    <!-- google ads code box -->
+<!--</div>-->
 
-      </section>
-    </div>
-  {% if page.comments %}
-  <script id="dsq-count-scr" src="//philsensus.disqus.com/count.js" async></script>
-  {% endif %}
-  </body>
-  {% include footer.html %}
-</html>
+{% include JB/comments %}
