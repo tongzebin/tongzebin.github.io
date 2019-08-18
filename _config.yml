@@ -1,46 +1,83 @@
-permalink: /:categories/:title/
+# Resources settings
+source:      .
+destination:      ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+timezone:    Asia/Hongkong
+gems:        []
+highlighter:     rouge
 
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input:  GFM
-  syntax_highlighter: rouge
+# Site settings
+email: master@joytou.net.cn
+author: Joytou Wu
+owner_name: Joytou Wu
 
-
-paginate: 10
-paginate_path: "page/:num"
+#Server
+url: https://joytou.net
+github: https://github.com/joytou/
 baseurl: ""
+dnsPrefetch: "on"
+#dnsPrefetch: "off" if don't want use dns-prefetch
+dns:
+      - "//dns18.hichina.com"
+      - "//dns17.hichina.com"
+      
+#Github announce Settings
+github_username: joytou
+github_repo: joytou.github.io
+github_label: announcement
 
+#Page settings
+future: true
+show_drafts: nil
+lsi: true
+published: false
+safe: false
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
 
+#Navbar setting
+#If show the 'download' item on the navbar
+showdownload: true
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      styles : [highlight.css,gitment.css,post.css]
-      scripts : [gitment.js, post.js]
+#Pagination setting
+#Testing, not opening
+paginatenum: 2
+ 
+exclude: ['README.md','Manifest.md']
+include: ['robots.txt','404.html','.htaccess']
 
+# Description
+description: "只为博客而生，也因为博客而存在。Not only for the existence of the blog, but also because of the existence of the blog."
 
+# Keywords
+keywords:
+        - "git"
+        - "bootstrap"
+        - "blog"
+        - "joytou"
+        - "markdown"
+        - "jekyll"
+        - "博客"
+        - "博客模板"
+        - "jekyll主题"
+        - "jekyll theme"
+        - "liquid"
+        - "静态"
+        - "响应式"
+        - "Coding"
+        - "gitee"
+        - "github"
+        
 
-title: "bit-ranger"
-email: sincerebravefight@gmail.com
-description: ""
-github:
-  username: bit-ranger
-swiftype:
-  searchId: iXZyPokVfxFaBTvi64Y6
-gitment:
-    repo: blog
-    client_id: a6fb73b3e790e234bab8
-    client_secret: cc10aaff53a03d05ab2ee002dbf401dd7627c7a3
+#Others
 
-url: "https://tongzebin.github.io/blog"
-imgrepo: "https://bit-ranger.github.io/blog/static/img"
-
-
-#url: "http://127.0.0.1:4000"
-#imgrepo: "http://127.0.0.1:4000/static/img"
-
+#ChangYan
+changyan:
+  appid: "cys9CkC15"
+  appconf: "prod_6c14cfe1b9706846e412ddac9bcdb068"
+  
+#Formspree
+formspree:
+  email_prefix: "1540294142"
+  email_suffix: "qq.com"
