@@ -1,5 +1,5 @@
 ---
-title: 创建github个人博客和学习markdown语法
+title: 学习markdown语法
 tags:
 ---
 
